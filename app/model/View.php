@@ -16,7 +16,7 @@ class View
     {
         ob_start();
         extract($args);
-        include BP . "app/view/$name.phtml";
+        include BP . "app/view/{$name}.phtml";
         $content = ob_get_clean();
 
         if($this->layout) {
